@@ -1,0 +1,40 @@
+create table admin(
+	admin_id int(15) not null, 
+	admin_name varchar(255) not null, 
+	admin_tele varchar(255) not null, 
+	admin_password varchar(255) not null,
+	primary key(admin_id)
+)engine=innodb default charset=utf8;
+
+
+insert into admin values(1, 1, 1, 1);
+
+create table book(
+	book_id int(15) not null,
+	book_name varchar(255) not null,
+	book_writer varchar(255) not null,
+	book_publish varchar(255) not null,
+	book_status varchar(255) not null,
+	primary key(book_id) 
+)engine=innodb default charset=utf8;
+
+
+create table book_info(
+	book_id int(50) not null,
+	reader_name varchar(255) not null,
+	borrow_date varchar(255) default null,
+	return_date varchar(255) default null,
+	book_status varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  PRIMARY KEY (book_id)
+)engine=innodb default charset=utf8;
+
+
+
+CREATE TABLE reader (
+  reader_id int(50) NOT NULL,
+  reader_name varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  reader_phone varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  reader_password varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  PRIMARY KEY (reader_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
